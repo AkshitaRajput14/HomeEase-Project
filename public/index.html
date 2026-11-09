@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HomeEase - Reliable home maintenance and subscription services.">
+    <title>HomeEase | Home Care Made Easy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="#" class="logo" onclick="showHome()">
+            <span class="logo-icon">⌂</span>
+            HomeEase
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home" onclick="showHome()">Home</a>
+            <a href="#services" onclick="showHome()">Services</a>
+            <a href="#plans" onclick="showHome()">Plans</a>
+            <a href="#about" onclick="showHome()">About</a>
+        </nav>
+
+        <div class="nav-actions" id="navActions">
+            <button class="btn btn-outline" onclick="openAuth('login')">
+                Login
+            </button>
+            <button class="btn btn-primary" onclick="openAuth('register')">
+                Get Started
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- HOMEPAGE -->
+<main id="homePage">
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+
+            <div class="hero-content">
+                <span class="section-tag">YOUR HOME, OUR CARE</span>
+
+                <h1>
+                    Home Care Made
+                    <span>Simple & Reliable</span>
+                </h1>
+
+                <p>
+                    Book trusted home maintenance professionals and
+                    enjoy affordable subscription plans for a
+                    comfortable and well-maintained home.
+                </p>
+
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large"
+                        onclick="openAuth('register')">
+                        Get Started
+                    </button>
+
+                    <a href="#services" class="btn btn-outline btn-large">
+                        Explore Services
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <h3>6+</h3>
+                        <p>Home Services</p>
+                    </div>
+                    <div>
+                        <h3>3</h3>
+                        <p>Subscription Plans</p>
+                    </div>
+                    <div>
+                        <h3>24/7</h3>
+                        <p>Support Concept</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="hero-image-card">
+                    <div class="hero-emoji">🏡</div>
+                    <h3>Your Home, Our Responsibility</h3>
+                    <p>Easy booking. Reliable care. Better living.</p>
+
+                    <div class="hero-feature">
+                        <span>✓</span> Professional home services
+                    </div>
+
+                    <div class="hero-feature">
+                        <span>✓</span> Affordable subscription plans
+                    </div>
+
+                    <div class="hero-feature">
+                        <span>✓</span> Convenient service booking
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="section services-section" id="services">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-tag">OUR SERVICES</span>
+                <h2>Everything Your Home Needs</h2>
+                <p>Choose from our range of home maintenance services.</p>
+            </div>
+
+            <div class="services-grid" id="servicesGrid">
+
+                <div class="service-card">
+                    <div class="service-icon">🧹</div>
+                    <h3>Home Cleaning</h3>
+                    <p>Professional cleaning for a fresh and hygienic home.</p>
+                    <span class="service-price">Starting ₹499</span>
+                    <button class="text-button"
+                        onclick="selectService('Home Cleaning')">
+                        Book Service →
+                    </button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Plumbing</h3>
+                    <p>Solutions for taps, pipes, leaks and bathroom repairs.</p>
+                    <span class="service-price">Starting ₹399</span>
+                    <button class="text-button"
+                        onclick="selectService('Plumbing')">
+                        Book Service →
+                    </button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💡</div>
+                    <h3>Electrical Repair</h3>
+                    <p>Electrical maintenance and repair services.</p>
+                    <span class="service-price">Starting ₹499</span>
+                    <button class="text-button"
+                        onclick="selectService('Electrical Repair')">
+                        Book Service →
+                    </button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">❄️</div>
+                    <h3>AC Servicing</h3>
+                    <p>AC cleaning, maintenance and servicing.</p>
+                    <span class="service-price">Starting ₹799</span>
+                    <button class="text-button"
+                        onclick="selectService('AC Servicing')">
+                        Book Service →
+                    </button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Appliance Repair</h3>
+                    <p>Maintenance for your essential home appliances.</p>
+                    <span class="service-price">Starting ₹599</span>
+                    <button class="text-button"
+                        onclick="selectService('Appliance Repair')">
+                        Book Service →
+                    </button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>General Maintenance</h3>
+                    <p>Regular maintenance to keep your home in good condition.</p>
+                    <span class="service-price">Starting ₹499</span>
+                    <button class="text-button"
+                        onclick="selectService('General Maintenance')">
+                        Book Service →
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SUBSCRIPTION PLANS -->
+    <section class="section plans-section" id="plans">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-tag">OUR SUBSCRIPTIONS</span>
+                <h2>Choose Your Home Care Plan</h2>
+                <p>Enjoy convenient and affordable home maintenance packages.</p>
+            </div>
+
+            <div class="plans-grid" id="plansGrid">
+
+                <div class="plan-card">
+                    <h3>Basic</h3>
+                    <p>For essential home maintenance.</p>
+                    <div class="plan-price">
+                        ₹699 <span>/ month</span>
+                    </div>
+
+                    <ul>
+                        <li>✓ 2 service visits</li>
+                        <li>✓ Basic maintenance</li>
+                        <li>✓ Email support</li>
+                    </ul>
+
+                    <button class="btn btn-outline btn-block"
+                        onclick="selectPlan(1)">
+                        Choose Basic
+                    </button>
+                </div>
+
+                <div class="plan-card featured-plan">
+                    <span class="popular-tag">POPULAR</span>
+                    <h3>Standard</h3>
+                    <p>For regular home maintenance.</p>
+                    <div class="plan-price">
+                        ₹1,499 <span>/ month</span>
+                    </div>
+
+                    <ul>
+                        <li>✓ 5 service visits</li>
+                        <li>✓ Priority booking</li>
+                        <li>✓ Discounted repairs</li>
+                    </ul>
+
+                    <button class="btn btn-primary btn-block"
+                        onclick="selectPlan(2)">
+                        Choose Standard
+                    </button>
+                </div>
+
+                <div class="plan-card">
+                    <h3>Premium</h3>
+                    <p>For complete home care.</p>
+                    <div class="plan-price">
+                        ₹11,999 <span>/ year</span>
+                    </div>
+
+                    <ul>
+                        <li>✓ Scheduled inspections</li>
+                        <li>✓ Priority support</li>
+                        <li>✓ Special discounts</li>
+                    </ul>
+
+                    <button class="btn btn-outline btn-block"
+                        onclick="selectPlan(3)">
+                        Choose Premium
+                    </button>
+                </div>
+
+            </div>
+
+            <p class="demo-note">
+                *All prices and transactions are for demonstration purposes.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section process-section" id="about">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-tag">SIMPLE PROCESS</span>
+                <h2>How HomeEase Works</h2>
+                <p>Get home maintenance services in a few simple steps.</p>
+            </div>
+
+            <div class="process-grid">
+
+                <div class="process-card">
+                    <div class="process-number">01</div>
+                    <div class="process-icon">👤</div>
+                    <h3>Create Account</h3>
+                    <p>Register as a customer and access your dashboard.</p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-number">02</div>
+                    <div class="process-icon">📋</div>
+                    <h3>Choose a Service</h3>
+                    <p>Select a home maintenance service or subscription.</p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-number">03</div>
+                    <div class="process-icon">💳</div>
+                    <h3>Confirm Booking</h3>
+                    <p>Complete your booking using the demo payment process.</p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-number">04</div>
+                    <div class="process-icon">🏡</div>
+                    <h3>Enjoy Home Care</h3>
+                    <p>Track your booking and manage your home services.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta-section">
+        <div class="container cta-content">
+            <div>
+                <h2>Make Home Maintenance Easier</h2>
+                <p>Join HomeEase and explore convenient home care services.</p>
+            </div>
+
+            <button class="btn btn-light btn-large"
+                onclick="openAuth('register')">
+                Create Your Account
+            </button>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-content">
+
+        <div>
+            <a href="#" class="logo footer-logo" onclick="showHome()">
+                <span class="logo-icon">⌂</span>
+                HomeEase
+            </a>
+            <p>Making home maintenance simple and convenient.</p>
+        </div>
+
+        <div>
+            <h4>Quick Links</h4>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#plans">Subscription Plans</a>
+        </div>
+
+        <div>
+            <h4>Contact</h4>
+            <p>Email: support@homeease.demo</p>
+            <p>Phone: +91 9876543210</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 HomeEase. All rights reserved.
+        <p>Demo project using sample information and simulated transactions.</p>
+    </div>
+</footer>
+
+<!-- LOGIN / REGISTRATION MODAL -->
+<div class="modal" id="authModal">
+    <div class="modal-content">
+
+        <button class="modal-close" onclick="closeAuth()">×</button>
+
+        <div class="modal-heading">
+            <div class="modal-logo">⌂</div>
+            <h2 id="authTitle">Welcome Back</h2>
+            <p id="authSubtitle">Login to your HomeEase account.</p>
+        </div>
+
+        <form id="authForm">
+
+            <div class="form-group" id="nameGroup" hidden>
+                <label for="authName">Full Name</label>
+                <input type="text" id="authName"
+                    placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="authEmail">Email Address</label>
+                <input type="email" id="authEmail"
+                    placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group" id="phoneGroup" hidden>
+                <label for="authPhone">Phone Number</label>
+                <input type="tel" id="authPhone"
+                    placeholder="Enter your phone number">
+            </div>
+
+            <div class="form-group">
+                <label for="authPassword">Password</label>
+                <input type="password" id="authPassword"
+                    placeholder="Enter your password" required>
+            </div>
+
+            <div class="form-group" id="roleGroup" hidden>
+                <label for="authRole">Register As</label>
+                <select id="authRole">
+                    <option value="customer">Customer</option>
+                    <option value="professional">Professional</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="categoryGroup" hidden>
+                <label for="authCategory">Professional Category</label>
+                <select id="authCategory">
+                    <option value="Cleaning">Cleaning</option>
+                    <option value="Plumbing">Plumbing</option>
+                    <option value="Electrical Repair">Electrical Repair</option>
+                    <option value="AC Servicing">AC Servicing</option>
+                    <option value="Appliance Repair">Appliance Repair</option>
+                    <option value="General Maintenance">General Maintenance</option>
+                </select>
+            </div>
+
+            <p class="form-message" id="authMessage"></p>
+
+            <button type="submit" class="btn btn-primary btn-block"
+                id="authSubmit">
+                Login
+            </button>
+
+        </form>
+
+        <p class="auth-switch" id="authSwitch">
+            Don't have an account?
+            <button type="button" onclick="switchAuth()">Register</button>
+        </p>
+
+        <p class="demo-note">
+            Use sample information for this demonstration project.
+        </p>
+
+    </div>
+</div>
+
+<!-- DASHBOARD -->
+<section class="dashboard-page" id="dashboardPage" hidden>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <a href="#" class="logo sidebar-logo" onclick="showDashboard()">
+            <span class="logo-icon">⌂</span>
+            HomeEase
+        </a>
+
+        <div class="sidebar-profile">
+            <div class="avatar" id="userAvatar">U</div>
+            <h3 id="sidebarName">User</h3>
+            <p id="sidebarRole">Customer</p>
+        </div>
+
+        <nav class="dashboard-nav" id="dashboardNav">
+            <!-- Dashboard links are added using JavaScript -->
+        </nav>
+
+        <button class="btn btn-outline logout-btn" onclick="logout()">
+            Logout
+        </button>
+
+    </aside>
+
+    <!-- DASHBOARD MAIN CONTENT -->
+    <div class="dashboard-main">
+
+        <header class="dashboard-header">
+            <div>
+                <h2 id="dashboardTitle">Dashboard</h2>
+                <p id="dashboardWelcome">Welcome to HomeEase.</p>
+            </div>
+
+            <div class="header-user" id="headerAvatar">U</div>
+        </header>
+
+        <div class="dashboard-content" id="dashboardContent">
+            <!-- Dynamic dashboard content will appear here -->
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TOAST NOTIFICATION -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- JAVASCRIPT -->
+<script src="app.js"></script>
+
+</body>
+</html>
